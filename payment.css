@@ -1,0 +1,114 @@
+.payment {
+    widows: 100%;
+    display: flex;
+
+    flex-direction: column;
+}
+
+.payment .headerr {
+    display: flex;
+    font-family: 'Muli', sans-serif;
+    color: rgb(68, 68, 68);
+    margin: 0px 0px 20px 10px;
+
+}
+
+.payment .payment-form {
+    width: 100%;
+}
+
+.payment .payment-form .form-left,
+.payment .payment-form .form-right {
+    widows: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment .payment-form .form-left input,
+.payment .payment-form .form-right input {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid rgba(141, 141, 141, 0.596);
+}
+
+.payment .payment-form .form-left input {
+    width: 400px;
+}
+
+.payment .payment-form .form-right input {
+    width: 300px;
+}
+
+.payment .payment-form .form-left .btn {
+    width: 80px;
+    border: 2px solid rgb(134, 212, 134);
+    margin: 30px 0px 0px 10px;
+}
+
+.payment .payment-form .form-right img {
+    width: 300px;
+    margin: 0px 0px 18px 10px !important;
+}
+
+.payment .payment-form .form-left .text {
+    padding: 0px 0px 0px 10px;
+}
+
+.payment .payment-form .form-left .text p {
+    padding: 0px 100px 0px 0px;
+}
+
+@media only screen and (max-width:1210px) {
+    .payment .payment-form .form-left .text {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width:978px) {
+    .payment .payment-form .form-left input {
+        width: 250px !important;
+    }
+
+    .payment .payment-form .form-right input {
+        width: 200px;
+    }
+
+    .payment .payment-form .form-left .btn {
+        margin: 25px 0px 0px 10px;
+    }
+    .payment .payment-form .form-right img {
+        margin: 10px 0px 18px 10px !important;
+    }
+}
+@media only screen and (max-width:760px) {
+    .payment .payment-form .form-left input {
+        width: 200px !important;
+    }
+
+    .payment .payment-form .form-right input {
+        width: 160px !important;
+    }
+
+    .payment .payment-form .form-left .btn {
+        margin: 20px 0px 0px 10px !important;
+    }
+    .payment .payment-form .form-right img {
+        margin: 10px 0px 26px 10px !important;
+    }
+}
+@media only screen and (max-width:500px) {
+    .payment .payment-form .form-left input {
+        width: 160px !important;
+    }
+
+    .payment .payment-form .form-right input {
+        width: 160px !important;
+    }
+
+    .payment .payment-form .form-left .btn {
+        margin: 20px 0px 0px 10px !important;
+    }
+    .payment .payment-form .form-right img {
+        margin: 20px 0px 24px 10px !important;
+    }
+}

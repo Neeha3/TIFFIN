@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Muli&family=Ubuntu:wght@400&display=swap" rel="stylesheet">
+    <!--icons-->
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+     <!--footer-->
+     <link rel="stylesheet" href="footer.css">
+
+
+    <title>contact</title>
+    <style>
+        html,
+        body,
+        header,
+        #bg {
+            height: 100%;
+        }
+
+        header {
+            height: fit-content;
+            width: 100%;
+        }
+
+        #bg {
+            background: url("TIFFIN/contact.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-background-size: cover;
+            background-size: cover;
+            height: 500px;
+        }
+
+        .top-nav-collapse {
+            background-color: #041b38;
+        }
+
+        @media (max-width: 768px) {
+            .navbar:not(.top-nav-collapse) {
+                background-color: #041b38;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background-color: #041b38;
+            }
+        }
+
+        .navbar {
+            width: 100%;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.26);
+            transition: 0.5s ease-in !important;
+        }
+        .navbar.scrolled{
+            background: #041b38 !important;
+        }
+
+        .logo {
+            font-size: 100%;
+            margin-left: 30px;
+        }
+
+        .navbar-nav {
+            float: right;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 0px;
+            margin-left: auto;
+        }
+
+        .nav-component {
+            margin-left: auto;
+            float: right;
+            padding-left: 30px;
+            padding-right: 0px;
+            margin-right: 0px;
+        }
+
+        .nav-component a {
+        
+            color: whitesmoke;
+            margin-left: auto;
+            padding-left: 20px;
+            font-size: 16px;
+        }
+
+        .basket {
+            padding-top: 0px;
+            padding-left: 50px;
+        }
+        /*____________Contact Us___________________*/
+         @media only screen and (max-width:1230px){
+            .contact-us{
+                display:flex;
+                flex-direction: column !important;
+                width:100% !important;
+                align-items:center;
+                justify-content: center;
+            }
+            .contact-us .form-left{
+                width:100% !important;
+            }
+            .contact-us .form-right{
+                display:none !important;
+            }
+         }
+        .contact-us {
+            width: 100%;
+            margin: 5% 0px;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: center;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        .contact-us .form-left {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            margin-right: 10%;
+        }
+
+        .contact-us .form-right {
+            width: 20%;
+            padding-top: 10%;
+            display: flex;
+            flex-direction: column;
+            text-align: end;
+        }
+
+        .contact-us h2 {
+            font-family: 'Muli';
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .contact-us h5 {
+            font-family: 'Ubuntu';
+            color: #B1ACAC;
+        }
+
+        .contact-us input {
+            border: 1px solid #D1D1D1 !important;
+            margin-top: 5px;
+            height: 45px;
+            font-family: 'Muli';
+            border-radius: 0px;
+        }
+
+        .contact-us textarea {
+            border: 1px solid #D1D1D1 !important;
+            margin-top: 5px;
+            height: 155px;
+            resize: vertical;
+            font-family: 'Muli';
+            border-radius: 2px;
+        }
+
+        .contact-us input::placeholder,
+        textarea::placeholder {
+            padding-left: 5px;
+        }
+
+        .contact-us .btn {
+            margin: 15px 0px 30px 0px !important;
+            padding: 10px 15px !important;
+            font-family: 'Ubuntu' !important;
+            background-color: #FFF;
+            border: 2px solid #eef896;
+            width: fit-content;
+            border-radius: 0px !important;
+            float: left;
+        }
+        /*______________/.Contact Us_______________________*/
+         /*===============================MODAL========================================*/
+        /*_____________Sign-In/Sign-Up_____________________*/
+        .Sign-In,
+        .Sign-Up {
+            width: 100%;
+            margin: 5% 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        .Sign-In .form,
+        .Sign-Up .form {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            align-items: center
+        }
+
+        .Sign-In input,
+        .Sign-Up input {
+            border: 1px solid #D1D1D1 !important;
+            margin-top: 5px;
+            height: 35px;
+            width: 265px;
+            font-family: 'Raleway', sans-serif !important;
+            border-radius: 4px;
+        }
+
+
+
+
+        .Sign-In .btn,
+        .Sign-Up .btn {
+            margin: 10px 0px 0px 0px !important;
+
+            font-family: 'Raleway', sans-serif !important;
+            background-color: rgba(200, 255, 186, 1);
+            border: 2px solid rgba(125, 255, 91, 1);
+            width: 265px;
+            border-radius: 4px !important;
+            height: 35px;
+            float: center;
+            color: rgba(73, 73, 73, 1);
+        }
+
+        /*__________________/.Sign-In/Sign-Up__________________________*/
+        .taabs1 {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            align-items: center;
+            justify-self: center;
+        }
+
+        .nav-link {
+            color: rgb(19, 83, 13) !important;
+        }
+
+        .nav-link:active {
+            border-bottom: black;
+        }
+
+        .nav-tabs .nav-item {
+            margin-bottom: 0px !important;
+        }
+
+        .nav-tabs {
+            border-bottom: 0px !important;
+        }
+
+        .modal-header {
+            border-bottom: 0px !important;
+            border-top-left-radius: 0px !important;
+            border-top-right-radius: 0px !important;
+
+        }
+
+        .modal-header .close1 {
+            border: 0px !important;
+            border: none !important;
+            outline: 0px !important;
+        }
+
+        /*=====================================/.MODAL===================================================*/
+        
+    /*-----Contact us cards-------*/
+    @media only screen and (max-width:1000px){
+        .s1 .row{
+            display:flex;
+            flex-direction: column !important;
+        }
+        .s1 .row .col{
+            width:100% !important;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .s1 .row .col .card{
+            width:400px !important;
+            height:200px;
+            margin:10px;
+            
+
+        }
+    }
+
+    
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <!--Navbar-->
+        <nav class="nav navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+
+            <div class="container-fluid">
+
+                <!--Navbar Logo-->
+                <img class="logo" src="TIFFIN/logo1.png">
+
+
+                <!--Collapse button-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navburger"
+                    aria-controls="navburger" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--Collapse-content-->
+                <div class="collapse navbar-collapse" id="navburger">
+
+                    <!--Links-->
+                    <ul class="navbar-nav ml-auto smooth-scroll">
+                        <li class="nav-component">
+                            <a class="a" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-component">
+                            <a class="a" href="About.html">ABOUT US</a>
+                        </li>
+                        <li class="nav-component">
+                            <a class="a" href="Menu.html">MENU</a>
+                        </li>
+                        <li class="nav-component">
+                            <a class="a" href="Contact.html">CONTACT</a>
+                        </li>
+                        <li class="nav-component">
+                            <a class="button" data-toggle="modal" data-target="#MODAL" style="cursor: pointer; color:white;">SIGNIN/SIGNUP</a>
+                        </li>
+                        <li class="basket">
+                            <a class="basket" href="Basket.html"><i class="fa fa-shopping-basket"
+                                    style="font-size:24px; color:white; float:right;"></i></a>
+                        </li>
+                    </ul>
+                    <!--/Links-->
+                </div>
+                <!--/Collapse-content-->
+
+            </div>
+
+        </nav>
+        <!--/Navbar-->
+        <!---Bg and Label-->
+
+        <div id="bg" class="view">
+
+            <div class="box">
+
+                <div class="container-fluid con">
+                    <div class="inner">
+                        <!--Head-->
+                        <h2 class="pb-0 mb-0"
+                            style="color:white;  justify-content: center; text-align:center; padding-top:135px; font-family:'Playfair Display', serif; font-style:normal; font-weight:normal; font-size: 100px; line-height: 180px;">
+                            CONTACT US</h2>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+    <!--Main body-->
+    <main class="mt-5">
+
+        
+
+        <!--_____________________________MODAL____________________________________--->
+        <div class="modal fade" id="MODAL">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <!----modal-header-->
+                    <div class="modal-header">
+                        <button type="button" class="close close1" data-dismiss="modal">×</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <!--___________TABS_________-->
+                        <!----CONTAINER-->
+                        <div class="container mt-3">
+                            <!--taabs-->
+                            <div class="taabs1">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#Sign-In">Sign In</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#Sign-Up">Sign Up</a>
+                                    </li>
+                                </ul>
+                                <!--/.NAv tabs-->
+                            </div>
+                            <!--/.taabs-->
+                            <!-- Tab content-->
+                            <div class="tab-content">
+                                <!----Sign In form-->
+                                <div id="Sign-In" class="container tab-pane active"><br>
+
+
+                                    <!--/.Form-->
+                                    <div class="Sign-In">
+                                        <div class="form">
+
+
+                                            <input type="text" name="name" id="name" placeholder="Email/Phone">
+                                            <input type="text" name="email" id="email" placeholder="Password">
+                                            <!--button-->
+                                            <button class="btn">Sign In</button>
+                                            <!--grp-->
+                                            <div class="d-flex"
+                                                style="flex-direction: row; width:400px; margin: 10px 0px 0px 0px ;">
+                                                <hr
+                                                    style="height:0px; background-color: rgba(197, 197, 197, 1); width:40%;">
+                                                <p style="color: rgb(207, 207, 207);">Or</p>
+                                                <hr
+                                                    style="height:0px; background-color: rgba(197, 197, 197, 1); width:40%;">
+                                            </div>
+                                            <!--/.grp-->
+                                            <p
+                                                style="font-family: 'Raleway', sans-serif; margin:0px; padding:0px; color:rgba(197, 197, 197, 1);">
+                                                Not
+                                                a member?</p>
+                                            <p
+                                                style="font-family: 'Raleway', sans-serif; margin:0px; padding:0px; color:rgba(76, 170, 52, 1);">
+                                                Register</p>
+                                        </div>
+                                    </div>
+                                    <!--/.Form-->
+
+
+
+                                </div>
+                                <!---/.Sign In form-->
+
+                                <!----Sign Up form-->
+                                <div id="Sign-Up" class="container tab-pane fade"><br>
+
+
+                                    <!--Form-->
+                                    <div class="Sign-Up">
+                                        <div class="form">
+
+
+                                            <input type="text" name="name" id="name" placeholder="Full name">
+                                            <input type="text" name="name" id="name" placeholder="Email/Phone">
+                                            <input type="text" name="email" id="email" placeholder="Password">
+                                            <!--button-->
+                                            <button class="btn">Sign Up</button>
+                                            <!---grp-->
+                                            <div class="d-flex"
+                                                style="flex-direction: row; width:400px; margin: 10px 0px 0px 0px ;">
+                                                <hr
+                                                    style="height:0px; background-color: rgba(197, 197, 197, 1); width:40%;">
+                                                <p style="color: rgb(207, 207, 207);">Or</p>
+                                                <hr
+                                                    style="height:0px; background-color: rgba(197, 197, 197, 1); width:40%;">
+                                            </div>
+                                            <!--/.grp-->
+                                            <p
+                                                style="font-family: 'Raleway', sans-serif; margin:0px; padding:0px; color:rgba(197, 197, 197, 1);">
+                                                I agree to the
+                                            </p>
+                                            <p
+                                                style="font-family: 'Raleway', sans-serif; margin:0px; padding:0px; color:rgba(76, 170, 52, 1);">
+                                                Terms & Conditions</p>
+
+
+
+                                        </div>
+                                    </div>
+                                    <!---/.Form-->
+
+
+
+                                </div>
+                                <!----/.Sign Up form-->
+                            </div>
+                            <!---/.Tab content-->
+
+                        </div>
+                        <!--/.CONTAINER-->
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--___________________________/.MODAL_________________________________-->
+
+
+
+
+        <div class="container">
+            <!--Section-->
+            <section class="s1">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col">
+                        <div class="card" style="height: 200px; width:275px; border-radius:15px; box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);">
+                            <span class="iconify justify-self-center align-self-center" data-inline="false"
+                                data-icon="fa-solid:map-marked-alt"
+                                style="color: #fd7373; font-size: 100px; padding-top:20px;"></span>
+                            <div class="card-content align-self-center justify-content-center">
+                                <div class="text">
+                                    <p style="text-align: center; color:gray; padding-top:20px;">
+                                        1256 Richmond town,<br>
+                                        Bangalore
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="height: 200px; width:275px; border-radius:15px; box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);">
+                            <span class="iconify justify-self-center align-self-center" data-inline="false"
+                                data-icon="emojione:telephone" style="font-size: 100px;  padding-top:20px;"></span>
+                            <div class="card-content align-self-center justify-content-center">
+                                <div class="text">
+                                    <p style="text-align: center; color:gray; padding-top:20px;">
+                                        Call us<br>
+                                        +91 467 583 9278
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="height: 200px; width:275px; border-radius:15px; box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);">
+                            <span class="iconify justify-self-center align-self-center" data-inline="false"
+                                data-icon="mdi:email-newsletter"
+                                style="color: #810909; font-size: 100px; padding-top:20px;"></span>
+                            <div class="card-content align-self-center justify-content-center">
+                                <div class="text">
+                                    <p style="text-align: center; color:gray; padding-top:20px;">
+                                        Email us<br>
+                                        bleh@gmail.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+   
+
+    <!--______________________Contact_Us_Form_____________________________-->
+    <div class="contact-us">
+        <div class="form-left">
+            <h2>Send Us A Message</h2>
+            <input type="text" name="name" id="name" placeholder="Full Name">
+            <input type="text" name="email" id="email" placeholder="Email Address">
+            <input type="text" name="number" id="number" placeholder="Mobile Number">
+            <textarea name="message" id="message" placeholder="Tell Us Something"></textarea>
+            <button class="btn">SEND MESSAGE</button>
+            <div class="social">
+                <h5 style="color: #FF7D7D;" \>Follow Us On:</h5>
+                <span class="iconify m-2" data-inline="false" data-icon="cib:instagram" style="color: #dd2170; font-size: 25px;"></span>
+                <span class="iconify m-2" data-inline="false" data-icon="cib:facebook" style="color: #216cb0; font-size: 23px;"></span>
+                <span class="iconify m-2" data-inline="false" data-icon="cib:twitter" style="color: #55acee; font-size: 23px;"></span>
+            </div>
+        </div>
+        <div class="form-right">
+            <h2 style="color: #FF7D7D;">Follow Us On<br>Social Media</h2>
+            <h5>Lorem, ipsum dolor</h5>
+            <h5>Lorem, ipsum dolor</h5>
+            <h5>Lorem, ipsum dolor</h5>
+        </div>
+    </div>
+    <!---/.contact-->
+</main>
+<!---/.main-->
+
+     <!-----footer-->
+     <footer class="footer bg-dark">
+
+        <div class="parti" style="padding-top:20px;"> 
+            <img src="TIFFIN/logo1.png" class="img-fluid">           
+        </div>
+
+        <div class="part">
+            <p class="head">CONTACT INF0</p>
+            <p class="txt">9876  RICHMOND ROAD,<br>
+                BANGALORE<br>
+                1234@gmail.com<br>
+                +91  966 9202 497
+                </p>        
+        </div>
+
+        <div class="part">
+            <p class="head">SERVICES OPEN</p>
+            <p class="txt" >
+            Monday-Friday<br>
+            9:00AM - 10:00AM
+            </p>
+        </div>
+
+        <div class="part">
+            <p class="head">FOLLOW US</p>
+            <div class="d-flex flex-row">
+            <span class="iconify m-2" data-inline="false" data-icon="cib:instagram" style="color: #dd2170; font-size: 25px;"></span>
+            <span class="iconify m-2" data-inline="false" data-icon="cib:facebook" style="color: #216cb0; font-size: 23px;"></span>
+            <span class="iconify m-2" data-inline="false" data-icon="cib:twitter" style="color: #55acee; font-size: 23px;"></span>
+            </div>  
+
+        </div>
+    </footer>
+    <!-----/.footer-->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <script>
+        $(window).scroll(function () {
+            $('nav').toggleClass('scrolled', $(this).scrollTop() >400);
+        });
+    </script>
+
+</body>
+
+</html>

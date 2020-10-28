@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--icons-->
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+     <!--footer-->
+     <link rel="stylesheet" href="footer.css">
+
+    <title>About</title>
+    <style>
+        html,
+        body,
+        header,
+        #bg {
+            height: 100%;
+        }
+
+        header {
+            width: 100%;
+            height: fit-content;
+        }
+
+        #bg {
+            background: url("TIFFIN/about.jpg")no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 500px;
+        }
+
+        .top-nav-collapse {
+            background-color: #093264;
+        }
+
+        @media (max-width: 768px) {
+            .navbar:not(.top-nav-collapse) {
+                background-color: #041b38;
+            }
+
+            .text {
+                justify-content: center;
+                align-items: center;
+                align-self: center;
+                flex-direction: column;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background-color: #041b38;
+            }
+
+            .text {
+                justify-content: center;
+                align-items: center;
+                align-self: center;
+                flex-direction: column;
+            }
+        }
+
+
+        .navbar {
+            width: 100%;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.26);
+            transition: 0.5s ease-in !important;
+        }
+
+        .navbar.scrolled {
+            background: #041b38;
+        }
+
+
+
+        .logo {
+            font-size: 100%;
+            margin-left: 30px;
+        }
+
+        .navbar-nav {
+            float: right;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 0px;
+            margin-left: auto;
+        }
+
+        .nav-component {
+            margin-left: auto;
+            float: right;
+            padding-left: 30px;
+            padding-right: 0px;
+            margin-right: 0px;
+        }
+
+        .nav-component a {
+
+            color: whitesmoke;
+            margin-left: auto;
+            padding-left: 20px;
+            font-size: 16px;
+        }
+
+        .basket {
+            padding-top: 0px;
+            padding-left: 50px;
+        }
+
+        main {
+            margin-top: 0px;
+
+        }
+
+        /*===============================MODAL========================================*/
+        /*_____________Sign-In/Sign-Up_____________________*/
+        .Sign-In,
+        .Sign-Up {
+            width: 100%;
+            margin: 5% 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        .Sign-In .form,
+        .Sign-Up .form {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            align-items: center
+        }
+
+        .Sign-In input,
+        .Sign-Up input {
+            border: 1px solid #D1D1D1 !important;
+            margin-top: 5px;
+            height: 35px;
+            width: 265px;
+            font-family: 'Raleway', sans-serif !important;
+            border-radius: 4px;
+        }
+
+
+
+
+        .Sign-In .btn,
+        .Sign-Up .btn {
+            margin: 10px 0px 0px 0px !important;
+
+            font-family: 'Raleway', sans-serif !important;
+            background-color: rgba(200, 255, 186, 1);
+            border: 2px solid rgba(125, 255, 91, 1);
+            width: 265px;
+            border-radius: 4px !important;
+            height: 35px;
+            float: center;
+            color: rgba(73, 73, 73, 1);
+        }
+
+        /*__________________/.Sign-In/Sign-Up__________________________*/
+        .taabs1 {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            align-items: center;
+            justify-self: center;
+        }
+
+        .nav-link {
+            color: rgb(19, 83, 13) !important;
+        }
+
+        .nav-link:active {
+            border-bottom: black;
+        }
+
+        .nav-tabs .nav-item {
+            margin-bottom: 0px !important;
+        }
+
+        .nav-tabs {
+            border-bottom: 0px !important;
+        }
+
+        .modal-header {
+            border-bottom: 0px !important;
+            border-top-left-radius: 0px !important;
+            border-top-right-radius: 0px !important;
+
+        }
+
+        .modal-header .close1 {
+            border: 0px !important;
+            border: none !important;
+            outline: 0px !important;
+        }
+
+        /*=====================================/.MODAL===================================================*/
+ 
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+
+            <div class="container-fluid">
+
+                <!--Navbar Logo-->
+                <img class="logo" src="TIFFIN/logo1.png">
+
+
+                <!--Collapse button-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navburger"
+                    aria-controls="navburger" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--Collapse-content-->
+                <div class="collapse navbar-collapse" id="navburger">
+
+                    <!--Links-->
+                    <ul class="nav navbar-nav ml-auto smooth-scroll">
+                        <li class="nav-component">
+                            <a class="a" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-component">
+                            <a class="a" href="About.html">ABOUT US</a>
+                        </li>
+                        <li class="nav-component">
+                            <a class="a" href="Menu.html">MENU</a>
+                        </li>
+                        <li class="nav-component">
+                            <a class="a" href="Contact.html">CONTACT</a>
+                        </li>
+                        <li class="nav-component">
+                            <a class="button" data-toggle="modal" data-target="#MODAL"
+                                style="cursor: pointer; color:white;">SIGNIN/SIGNUP</a>
+                        </li>
+                        <li class="basket">
+                            <a class="basket" href="Basket.html"><i class="fa fa-shopping-basket"
+                                    style="font-size:24px; color:white; float:right;"></i></a>
+                        </li>
+                    </ul>
+                    <!--/Links-->
+                </div>
+                <!--/Collapse-content-->
+
+            </div>
+
+        </nav>
+        <!--/Navbar-->
+        <!---Bg and Label-->
+
+        <div id="bg" class="view">
+
+            <div class="box mb-0">
+
+                <div class="container-fluid con justify-content-center" style="align-content:center;">
+                    <div class="inner d-flex justify-content-center align-items-center align-self-center">
+                        <!--Head-->
+                        <h2 class="white-text pt- mb-0"
+                            style="color:white;  justify-content: center; text-align:center; padding-top:135px; font-family:'Playfair Display', serif; font-style:normal;font-weight:normal;font-size: 100px;line-height: 180px;">
+                            ABOUT US
+                        </h2>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+    <main class="mt-5">
+
+
+
+        <!--_____________________________MODAL____________________________________--->
+        <div class="modal fade" id="MODAL">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <!----modal-header-->
+                    <div class="modal-header">
+                        <button type="button" class="close close1" data-dismiss="modal">×</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <!--___________TABS_________-->
+                        <!----CONTAINER-->
+                        <div class="container mt-3">
+                            <!--taabs-->
+                            <div class="taabs1">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#Sign-In">Sign In</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#Sign-Up">Sign Up</a>
+                                    </li>
+                                </ul>
+                                <!--/.NAv tabs-->
+                            </div>
+                            <!--/.taabs-->
+                            <!-- Tab content-->
+                            <div class="tab-content">
+                                <!----Sign In form-->
+                                <div id="Sign-In" class="container tab-pane active"><br>
+
+
+                                    <!--/.Form-->
+                                    <div class="Sign-In">
+                                        <div class="form">
+
+
+                                            <input type="text" name="name" id="name" placeholder="Email/Phone">
+                                            <input type="text" name="email" id="email" placeholder="Password">
+                                            <!--button-->
+                                            <button class="btn">Sign In</button>
+                                            <!--grp-->
+                                            <div class="d-flex"
+                                                style="flex-direction: row; width:400px; margin: 10px 0px 0px 0px ;">
+                                                <hr
+                                                    style="height:0px; background-color: rgba(197, 197, 197, 1); width:40%;">
+                                                <p style="color: rgb(207, 207, 207);">Or</p>
+                                                <hr
+                                                    style="height:0px; background-color: rgba(197, 197, 197, 1); width:40%;">
+                                            </div>
+                                            <!--/.grp-->
+                                            <p
+                                                style="font-family: 'Raleway', sans-serif; margin:0px; padding:0px; color:rgba(197, 197, 197, 1);">
+                                                Not
+                                                a member?</p>
+                                            <p
+                                                style="font-family: 'Raleway', sans-serif; margin:0px; padding:0px; color:rgba(76, 170, 52, 1);">
+                                                Register</p>
+                                        </div>
+                                    </div>
+                                    <!--/.Form-->
+
+
+
+                                </div>
+                                <!---/.Sign In form-->
+
+                                <!----Sign Up form-->
+                                <div id="Sign-Up" class="container tab-pane fade"><br>
+
+
+                                    <!--Form-->
+                                    <div class="Sign-Up">
+                                        <div class="form">
+
+
+                                            <input type="text" name="name" id="name" placeholder="Full name">
+                                            <input type="text" name="name" id="name" placeholder="Email/Phone">
+                                            <input type="text" name="email" id="email" placeholder="Password">
+                                            <!--button-->
+                                            <button class="btn">Sign Up</button>
+                                            <!---grp-->
+                                            <div class="d-flex"
+                                                style="flex-direction: row; width:400px; margin: 10px 0px 0px 0px ;">
+                                                <hr
+                                                    style="height:0px; background-color: rgba(197, 197, 197, 1); width:40%;">
+                                                <p style="color: rgb(207, 207, 207);">Or</p>
+                                                <hr
+                                                    style="height:0px; background-color: rgba(197, 197, 197, 1); width:40%;">
+                                            </div>
+                                            <!--/.grp-->
+                                            <p
+                                                style="font-family: 'Raleway', sans-serif; margin:0px; padding:0px; color:rgba(197, 197, 197, 1);">
+                                                I agree to the
+                                            </p>
+                                            <p
+                                                style="font-family: 'Raleway', sans-serif; margin:0px; padding:0px; color:rgba(76, 170, 52, 1);">
+                                                Terms & Conditions</p>
+
+
+
+                                        </div>
+                                    </div>
+                                    <!---/.Form-->
+
+
+
+                                </div>
+                                <!----/.Sign Up form-->
+                            </div>
+                            <!---/.Tab content-->
+
+                        </div>
+                        <!--/.CONTAINER-->
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--___________________________/.MODAL_________________________________-->
+
+
+
+
+        <div class="container">
+            <!---Section1--->
+            <section class="justify-content-center">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-6 col-md-6 mb-5 d-flex justify-content-center align-items-center">
+
+                        <img src="TIFFIN/ab2.jpg" class="img-fluid">
+
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-5 d-flex justify-content-center align-items-center">
+                        <div class="text d-flex" style="flex-direction: column;">
+                            <h1>Know our story</h1><br>
+                            <p>
+                                Mom’s Foods is a professionally managed firm headed by belh bleh bleh,
+                                a Dietician and Nutritionist by qualification and expertise. She has
+                                worked in the therapeutic field for more than 20 years, heading a number
+                                of hospitals in the capacity of Chief Dietician. She left her practice
+                                to serve this largely uncatered segment of the food industry. She knows
+                                food when it comes to creating the right diet that is wholesome in every way.
+                                Mom’s Foods is a professionally managed firm headed by bleh bleh bleh,
+                                a Dietician and Nutritionist by qualification and expertise. She has
+                                worked in the therapeutic field for more than 20 years, heading a number
+                                of hospitals in the capacity of Chief Dietician. She left her practice
+                                to serve this largely uncatered segment of the food industry. She knows
+                                food when it comes to creating the right diet that is wholesome in every wa
+                            </p>
+                        </div>
+
+                    </div>
+
+
+            </section>
+            <!---/.Section-->
+        </div>
+
+    </main>
+    <!-----footer-->
+    <footer class="footer bg-dark">
+
+        <div class="parti" style="padding-top:20px;">
+            <img src="TIFFIN/logo1.png" class="img-fluid">
+        </div>
+
+        <div class="part">
+            <p class="head">CONTACT INF0</p>
+            <p class="txt">9876 RICHMOND ROAD,<br>
+                BANGALORE<br>
+                1234@gmail.com<br>
+                +91 966 9202 497
+            </p>
+        </div>
+
+        <div class="part">
+            <p class="head">SERVICES OPEN</p>
+            <p class="txt">
+                Monday-Friday<br>
+                9:00AM - 10:00AM
+            </p>
+        </div>
+
+        <div class="part">
+            <p class="head">FOLLOW US</p>
+            <div class="d-flex flex-row">
+                <span class="iconify m-2" data-inline="false" data-icon="cib:instagram"
+                    style="color: #dd2170; font-size: 25px;"></span>
+                <span class="iconify m-2" data-inline="false" data-icon="cib:facebook"
+                    style="color: #216cb0; font-size: 23px;"></span>
+                <span class="iconify m-2" data-inline="false" data-icon="cib:twitter"
+                    style="color: #55acee; font-size: 23px;"></span>
+            </div>
+
+        </div>
+    </footer>
+    <!-----/.footer-->
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <script>
+        $(window).scroll(function () {
+            $('nav').toggleClass('scrolled', $(this).scrollTop() > 200);
+        });
+    </script>
+
+</body>
+
+</html>

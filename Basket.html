@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@500&display=swap" rel="stylesheet">
+    <!--icons-->
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <!--footer-->
+    <link rel="stylesheet" href="footer.css">
+
+
+
+    <title>Basket</title>
+    <style>
+        html,
+        body,
+        header,
+        #bg {
+            height: 100%;
+        }
+
+        header {
+            width: 100%;
+            height: fit-content;
+        }
+
+        #bg {
+            background: url("TIFFIN/basket.png")no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 500px;
+        }
+
+        .top-nav-collapse {
+            background-color: #041b38;
+        }
+
+        @media (max-width: 768px) {
+            .navbar:not(.top-nav-collapse) {
+                background-color: #041b38;
+            }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background-color: #041b38;
+            }
+        }
+
+        .navbar {
+            width: 100%;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.26);
+            transition: 0.5s ease-in !important;
+        }
+
+        .navbar.scrolled {
+            background: #041b38;
+        }
+
+        .logo {
+            font-size: 100%;
+            margin-left: 30px;
+        }
+
+        .navbar-nav {
+            float: right;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 0px;
+            margin-left: auto;
+        }
+
+        .nav-component {
+            margin-left: auto;
+            float: right;
+            padding-left: 30px;
+            padding-right: 0px;
+            margin-right: 0px;
+        }
+
+        .nav-component a {
+
+            color: whitesmoke;
+            margin-left: auto;
+            padding-left: 20px;
+            font-size: 16px;
+        }
+
+        .basket {
+            padding-top: 0px;
+            padding-left: 50px;
+        }
+
+        /*====counter=====*/
+        span {
+            cursor: pointer;
+        }
+
+        .number {
+            margin: 5px;
+            align-self: center;
+            justify-content: center;
+        }
+
+
+        .minus,
+        .plus {
+            width: 14px;
+            height: 20px;
+            background: #f2f2f2;
+            border-radius: 4px;
+
+            border: 1px solid #ddd;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        input {
+            height: 20px;
+            width: 40px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /*-----------Payment modal-----------*/
+
+        .modal-body .button {
+            border: 1px solid rgba(105, 105, 105, 0.541);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            height: 50px;
+            background-color: rgb(8, 5, 63);
+        }
+        .modal-body .btn {
+            height:auto;
+            width:auto !important;
+            border:none !important;
+            outline: 0px !important;
+        }
+
+        .modal-header .close2 {
+            border: 0px !important;
+            border: none !important;
+            outline: 0px !important;
+        }
+       @media only screen and (max-width:600px){
+        #paymentModal .modal-dialog{
+           transform: translate(20% , 0%);   
+        }
+       }
+
+        /*____________________*/
+        /*===============================MODAL========================================*/
+        /*_____________Sign-In/Sign-Up_____________________*/
+        .Sign-In,
+        .Sign-Up {
+            width: 100%;
+            margin: 5% 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        .Sign-In .form,
+        .Sign-Up .form {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            align-items: center
+        }
+
+        .Sign-In input,
+        .Sign-Up input {
+            border: 1px solid #D1D1D1 !important;
+            margin-top: 5px;
+            height: 35px;
+            width: 265px;
+            font-family: 'Raleway', sans-serif !important;
+            border-radius: 4px;
+        }
+
+
+
+
+        .Sign-In .btn,
+        .Sign-Up .btn {
+            margin: 10px 0px 0px 0px !important;
+
+            font-family: 'Raleway', sans-serif !important;
+            background-color: rgba(200, 255, 186, 1);
+            border: 2px solid rgba(125, 255, 91, 1);
+            width: 265px;
+            border-radius: 4px !important;
+            height: 35px;
+            float: center;
+            color: rgba(73, 73, 73, 1);
+        }
+
+        /*__________________/.Sign-In/Sign-Up__________________________*/
+        .taabs1 {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            align-items: center;
+            justify-self: center;
+        }
+
+        .nav-link {
+            color: rgb(19, 83, 13) !important;
+        }
+
+        .nav-link:active {
+            border-bottom: black;
+        }
+
+        .nav-tabs .nav-item {
+            margin-bottom: 0px !important;
+        }
+
+        .nav-tabs {
+            border-bottom: 0px !important;
+        }
+
+        /*______________*/
+        .modal-header {
+            border-bottom: 0px !important;
+            border-top-left-radius: 0px !important;
+            border-top-right-radius: 0px !important;
+
+        }
+
+        .modal-header .close1 {
+            border: 0px !important;
+            border: none !important;
+            outline: 0px !important;
+        }
+
+        /*=====================================/.MODAL===================================================*/
+
+        /*_______________________Delivery____________________________*/
+        .Delivery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+        }
+
+        .Delivery .d {
+            width: 100%;
+            height: 300px;
+            background-color: rgba(204, 249, 200, 1);
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin: 5rem 0rem 5rem 0rem;
+        }
+
+        .Delivery .d .d1 {
+            display: flex;
+            align-self: flex-start;
+        }
+
+        .Delivery .d .TXT {
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            margin: 0px 0px 0px 100px;
+            height: auto;
+            width: auto;
+        }
+
+        .Delivery .d .TXT h1 {
+            font-family: 'Poiret One', cursive;
+            color: #000000;
+            font-weight: bolder;
+        }
+
+        .Delivery .d .TXT h5 {
+            font-weight: normal;
+        }
+
+        .Delivery .d .TXT .btn {
+            display: flex;
+            align-items: center;
+            justify-self: center;
+            justify-content: center;
+            text-decoration: none;
+            width: 120px;
+            background: none;
+            border: none;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media only screen and (max-width:738px) {
+            .Delivery .d .d1 {
+                display: flex;
+                align-self: center !important;
+                width: 295px !important;
+                height: 280px !important;
+            }
+
+            .Delivery .d .d1 img {
+                width: 250px !important;
+            }
+
+            .Delivery .d .TXT {
+                margin: 0px 0px 0px 20px !important;
+            }
+
+            .Delivery .d .TXT h5 {
+                display: none;
+            }
+        }
+
+        /*______________________/.Delivery________________________________-*/
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <!--Navbar-->
+        <nav class="nav navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+
+            <div class="container-fluid">
+
+                <!--Navbar Logo-->
+                <img class="logo" src="TIFFIN/logo1.png">
+
+
+                <!--Collapse button-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navburger"
+                    aria-controls="navburger" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--Collapse-content-->
+                <div class="collapse navbar-collapse" id="navburger">
+
+                    <!--Links-->
+                    <ul class="navbar-nav ml-auto smooth-scroll">
+                        <li class="nav-component">
+                            <a class="a" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-component">
+                            <a class="a" href="About.html">ABOUT US</a>
+                        </li>
+                        <li class="nav-component">
+                            <a class="a" href="Menu.html">MENU</a>
+                        </li>
+                        <li class="nav-component">
+                            <a class="a" href="Contact.html">CONTACT</a>
+                        </li>
+                        <li class="nav-component">
+                            <a class="button" data-toggle="modal" data-target="#MODAL"
+                                style="cursor: pointer; color:white;">SIGNIN/SIGNUP</a>
+                        </li>
+                        <li class="basket">
+                            <a class="basket" href="Basket.html"><i class="fa fa-shopping-basket"
+                                    style="font-size:24px; color:white; float:right;"></i></a>
+                        </li>
+                    </ul>
+                    <!--/Links-->
+                </div>
+                <!--/Collapse-content-->
+
+            </div>
+
+        </nav>
+        <!--/Navbar-->
+        <!---Bg and Label-->
+
+        <div id="bg" class="view">
+
+            <div class="box">
+
+                <div class="container-fluid con" style="display:flexbox; align-content: flex-end;">
+                    <div class="inner">
+                        <!--Head-->
+                        <h2 class="display-4  white-text pt- mb-0"
+                            style="color:white;  justify-content:center; text-align:center; padding-top:135px; font-family:'Playfair Display', serif; font-style:normal; font-weight:normal; font-size: 100px; line-height: 180px;">
+                            YOUR BASKET</h2>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+    <main class="mt-5">
+
+
+
+        <!--_____________________________MODAL____________________________________--->
+        <div class="modal fade" id="MODAL">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <!----modal-header-->
+                    <div class="modal-header">
+                        <button type="button" class="close close1" data-dismiss="modal">×</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <!--___________TABS_________-->
+                        <!----CONTAINER-->
+                        <div class="container mt-3">
+                            <!--taabs-->
+                            <div class="taabs1">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#Sign-In">Sign In</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#Sign-Up">Sign Up</a>
+                                    </li>
+                                </ul>
+                                <!--/.NAv tabs-->
+                            </div>
+                            <!--/.taabs-->
+                            <!-- Tab content-->
+                            <div class="tab-content">
+                                <!----Sign In form-->
+                                <div id="Sign-In" class="container tab-pane active"><br>
+
+
+                                    <!--/.Form-->
+                                    <div class="Sign-In">
+                                        <div class="form">
+
+
+                                            <input type="text" name="name" id="name" placeholder="Email/Phone">
+                                            <input type="text" name="email" id="email" placeholder="Password">
+                                            <!--button-->
+                                            <button class="btn">Sign In</button>
+                                            <!--grp-->
+                                            <div class="d-flex"
+                                                style="flex-direction: row; width:400px; margin: 10px 0px 0px 0px ;">
+                                                <hr
+                                                    style="height:0px; background-color: rgba(197, 197, 197, 1); width:40%;">
+                                                <p style="color: rgb(207, 207, 207);">Or</p>
+                                                <hr
+                                                    style="height:0px; background-color: rgba(197, 197, 197, 1); width:40%;">
+                                            </div>
+                                            <!--/.grp-->
+                                            <p
+                                                style="font-family: 'Raleway', sans-serif; margin:0px; padding:0px; color:rgba(197, 197, 197, 1);">
+                                                Not
+                                                a member?</p>
+                                            <p
+                                                style="font-family: 'Raleway', sans-serif; margin:0px; padding:0px; color:rgba(76, 170, 52, 1);">
+                                                Register</p>
+                                        </div>
+                                    </div>
+                                    <!--/.Form-->
+
+
+
+                                </div>
+                                <!---/.Sign In form-->
+
+                                <!----Sign Up form-->
+                                <div id="Sign-Up" class="container tab-pane fade"><br>
+
+
+                                    <!--Form-->
+                                    <div class="Sign-Up">
+                                        <div class="form">
+
+
+                                            <input type="text" name="name" id="name" placeholder="Full name">
+                                            <input type="text" name="name" id="name" placeholder="Email/Phone">
+                                            <input type="text" name="email" id="email" placeholder="Password">
+                                            <!--button-->
+                                            <button class="btn">Sign Up</button>
+                                            <!---grp-->
+                                            <div class="d-flex"
+                                                style="flex-direction: row; width:400px; margin: 10px 0px 0px 0px ;">
+                                                <hr
+                                                    style="height:0px; background-color: rgba(197, 197, 197, 1); width:40%;">
+                                                <p style="color: rgb(207, 207, 207);">Or</p>
+                                                <hr
+                                                    style="height:0px; background-color: rgba(197, 197, 197, 1); width:40%;">
+                                            </div>
+                                            <!--/.grp-->
+                                            <p
+                                                style="font-family: 'Raleway', sans-serif; margin:0px; padding:0px; color:rgba(197, 197, 197, 1);">
+                                                I agree to the
+                                            </p>
+                                            <p
+                                                style="font-family: 'Raleway', sans-serif; margin:0px; padding:0px; color:rgba(76, 170, 52, 1);">
+                                                Terms & Conditions</p>
+
+
+
+                                        </div>
+                                    </div>
+                                    <!---/.Form-->
+
+
+
+                                </div>
+                                <!----/.Sign Up form-->
+                            </div>
+                            <!---/.Tab content-->
+
+                        </div>
+                        <!--/.CONTAINER-->
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--___________________________/.MODAL_________________________________-->
+
+
+
+
+        <!------___________Section1__________________-->
+        <section class="Delivery">
+            <div class="d">
+                <div class="d1">
+                    <img src="TIFFIN/DDDDman.png" class="Dman">
+                </div>
+                <div class="TXT">
+                    <h1>ENJOY QUICK
+                        DELIVERY</h1>
+                    <h5>Lorem ipsum dolor sit amet.</h5>
+                    <button class="btn"
+                        style=" border:3px solid #234e00a6 ; text-decoration: none; border-radius:5px; width:130px; height:40px;">
+                        <a href="Menu.html"
+                            style="color:rgb(0, 0, 0) !important; text-decoration: none; font-weight: 700;">ORDER
+                            NOW</a>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!------___________/.Section1__________________-->
+
+
+        <div class="container mb-5">
+            <div class="row">
+                <!---col1-->
+                <div class="col">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>PRODUCT</th>
+                                <th>PRICE</th>
+                                <th>QUANTITY</th>
+                                <th>TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="TIFFIN/basket2.jpg">
+                                    <p style="padding:5px 0px 0px 12px;">Dish Name</p>
+                                </td>
+                                <td>$12</td>
+                                <td>
+                                    <div class="number">
+                                        <span style="font-size: 13px; position:sticky;" class="minus">-</span>
+                                        <input style="font-size: 13px;" type="text" value="1" />
+                                        <span style="font-size: 13px;" class="plus">+</span>
+                                    </div>
+                                </td>
+                                <td>$48</td>
+                            </tr>
+                            <tr>
+                                <td><img src="TIFFIN/basket2.jpg">
+                                    <p style="padding:5px 0px 0px 12px;">Dish Name</p>
+                                </td>
+                                <td>$12</td>
+                                <td>
+                                    <div class="number">
+                                        <span style="font-size: 13px; position:sticky;" class="minus">-</span>
+                                        <input style="font-size: 13px;" type="text" value="1" />
+                                        <span style="font-size: 13px;" class="plus">+</span>
+                                    </div>
+                                </td>
+                                <td>$48</td>
+                            </tr>
+                            <tr>
+                                <td><img src="TIFFIN/basket2.jpg">
+                                    <p style="padding:5px 0px 0px 12px;">Dish Name</p>
+                                </td>
+                                <td>$12</td>
+                                <td>
+                                    <div class="number">
+                                        <span style="font-size: 13px; position:sticky;" class="minus">-</span>
+                                        <input style="font-size: 13px;" type="text" value="1" />
+                                        <span style="font-size: 13px;" class="plus">+</span>
+                                    </div>
+                                </td>
+                                <td>$48</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--/.col1-->
+                <!------col2-------->
+                <div
+                    class="col-sm-12 col-lg-4 d-flex justify-content-center align-items-center justify-self-center align-self-center">
+                    <div class="card d-flex align-self-center justify-self-center"
+                        style="height:380px; width:300px; vertical-align:middle !important; border:none;">
+                        <div class="card-header d-flex justify-content-center"
+                            style="background-color: rgba(113, 218, 211, 1);">
+                            <h6>ORDER SUMMARY</h6>
+                        </div>
+                        <div class="card-body" style="background-color: rgba(221, 221, 221, 1);">
+                            <div class="d-flex flex-row">
+                                <div class="justify-self-start align-self-start">
+                                    <p>SubTotal</p><br>
+                                    <p>Tax</p><br>
+                                    <p>Delivery</p><br>
+                                    <p>Total</p>
+                                </div>
+                                <div class="ml-auto">
+                                    <p>$12</p><br>
+                                    <p>$2</p><br>
+                                    <p>$5</p><br>
+                                    <p>$19</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div type="button" class="btn card-footer d-flex justify-content-center" data-toggle="modal"
+                            data-target="#paymentModal" style="background-color: rgba(204, 249, 200, 1);">
+                            <h6>CHEKOUT</h6>
+                        </div>
+
+
+                        <!---_________________-Payment Modal _____________________-->
+                        <div class="modal" id="paymentModal">
+                            <div class="modal-dialog modal-dialog-centered" style="width:fit-content !important;">
+                                <div class="modal-content">
+
+                                    <!---PaymentModal Header--->
+                                    <div class="modal-header">
+                                        <h4 style="font-size:20px; font-family: 'Muli', sans-serif;padding-left: 60px;">
+                                            Select Payment type</h4>
+                                        <button type="button" class="close close2" data-dismiss="modal">×</button>
+                                    </div>
+                                    <!---PaymentModal Body--->
+                                    <div class="modal-body w-100 d-flex flex-column">
+
+                                        <!--card-->
+                                        <div class="d-flex flex-row button">
+                                            <a href="payment.html" style="text-decoration: none;">
+                                                <div class="btn" style="color:white;">
+                                                    CREDIT/UPI/DEBIT
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!----cash-->
+                                        <div class="d-flex flex-row button">
+                                            <a href="" style="text-decoration: none;">
+                                                <div class="btn" style="color:white;">
+                                                    CASH ON DELIVERY
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!--_______________________/.Payment Modal______________--->
+
+
+
+
+                        </div>
+                    </div>
+                    <!--------/.col2-->
+                </div>
+                <!-------/.Row----->
+            </div>
+            <!------/.Container-->
+
+    </main>
+    <!-----footer-->
+    <footer class="footer bg-dark">
+
+        <div class="parti" style="padding-top:20px;">
+            <img src="TIFFIN/logo1.png" class="img-fluid">
+        </div>
+
+        <div class="part">
+            <p class="head">CONTACT INF0</p>
+            <p class="txt">9876 RICHMOND ROAD,<br>
+                BANGALORE<br>
+                1234@gmail.com<br>
+                +91 966 9202 497
+            </p>
+        </div>
+
+        <div class="part">
+            <p class="head">SERVICES OPEN</p>
+            <p class="txt">
+                Monday-Friday<br>
+                9:00AM - 10:00AM
+            </p>
+        </div>
+
+        <div class="part">
+            <p class="head">FOLLOW US</p>
+            <div class="d-flex flex-row">
+                <span class="iconify m-2" data-inline="false" data-icon="cib:instagram"
+                    style="color: #dd2170; font-size: 25px;"></span>
+                <span class="iconify m-2" data-inline="false" data-icon="cib:facebook"
+                    style="color: #216cb0; font-size: 23px;"></span>
+                <span class="iconify m-2" data-inline="false" data-icon="cib:twitter"
+                    style="color: #55acee; font-size: 23px;"></span>
+            </div>
+
+        </div>
+    </footer>
+    <!-----/.footer-->
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <!---navbar-->
+    <script>
+        $(window).scroll(function () {
+            $('nav').toggleClass('scrolled', $(this).scrollTop() > 400);
+        });
+    </script>
+    <!----counter-->
+    <script>
+        $(document).ready(function () {
+            $('.minus').click(function () {
+                var $input = $(this).parent().find('input');
+                var count = parseInt($input.val()) - 1;
+                count = count < 1 ? 1 : count;
+                $input.val(count);
+                $input.change();
+                return false;
+            });
+            $('.plus').click(function () {
+                var $input = $(this).parent().find('input');
+                $input.val(parseInt($input.val()) + 1);
+                $input.change();
+                return false;
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,987 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+    <!--icons-->
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+
+    <!--testimonials-->
+    <link rel="stylesheet" href="testimonials.css">
+    <!--footer-->
+    <link rel="stylesheet" href="footer.css">
+
+    <title>Home</title>
+    <style>
+        html,
+        body,
+        header,
+        /*=====Landing css=====*/
+        #bg {
+            height: 100%;
+        }
+
+        #bg {
+            background: url("TIFFIN/bg2.jpg")no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .box .con {
+            display: flexbox;
+            align-content: flex-end;
+        }
+
+        .box .con .inner h2 {
+            font-weight: normal;
+            font-size: 130px;
+            display: flex;
+            line-height: 180px;
+            color: white;
+            justify-content: start;
+            text-align: left;
+            padding-top: 135px;
+            padding-left: 122px;
+            font-family: 'Playfair Display', serif;
+            font-style: normal;
+        }
+
+        .box .con .inner h4 {
+            color: white;
+            display: flex;
+            justify-content: start;
+            text-align: left;
+            padding-left: 122px;
+            font-family: 'Muli', sans-serif;
+            font-style: italic;
+            font-size: 28px;
+            line-height: 45px;
+            letter-spacing: 0.02em;
+        }
+
+        .box .con .inner .btn {
+            color: whitesmoke;
+            display: flex;
+            margin-left: 122px;
+        }
+
+        @media only screen and (max-width:750px) {
+            .box .con .inner h2 {
+                font-size: 100px !important;
+                display: flex;
+                justify-content: center !important;
+                text-align: center !important;
+                padding-left: 0px !important;
+
+            }
+
+            .box .con .inner h4 {
+                display: flex;
+                justify-content: center !important;
+                text-align: center !important;
+                padding-left: 0px !important;
+                font-size: 20px;
+            }
+
+            .box .con .inner .btn {
+                display: flex;
+                margin-left: 0px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                font-size: 20px !important;
+
+
+            }
+        }
+
+        /*=====/.Landing css=======*/
+        .top-nav-collapse {
+            background-color: #041b38;
+        }
+
+        @media (max-width: 768px) {
+            .navbar:not(.top-nav-collapse) {
+                background-color: #041b38;
+            }
+
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background-color: #041b38;
+            }
+        }
+
+        header {
+            width: 100%;
+        }
+
+        .navbar {
+            width: 100%;
+            height: auto;
+            background-color: rgba(245, 245, 245, 0);
+            transition: 0.5s ease-in !important;
+        }
+
+        .navbar.scrolled {
+            background: #041b38 !important;
+        }
+
+        .logo {
+            font-size: 100%;
+            margin-left: 30px;
+        }
+
+        .navbar-nav {
+            float: right;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 0px;
+            margin-left: auto;
+        }
+
+        .nav-component {
+            margin-left: auto;
+            float: right;
+            padding-left: 30px;
+            padding-right: 0px;
+            margin-right: 0px;
+        }
+
+        .nav-component a {
+
+            color: whitesmoke;
+            margin-left: auto;
+            padding-left: 20px;
+            font-size: 16px;
+        }
+
+        .basket {
+            padding-top: 0px;
+            padding-left: 50px;
+        }
+
+        /*_____________________________OWL-CAROUSEL___________________________*/
+        .owl-nav {
+            display: flex;
+            align-self: center;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .owl-next,
+        .owl-prev {
+            font-size: 2rem !important;
+            display: inline-flex !important;
+            align-self: center;
+            outline: 0 !important;
+
+        }
+
+        .owl-nav .owl-prev span {
+            outline: 0 !important;
+        }
+
+        .owl-nav button.owl-next .fa-chevron-right,
+        .owl-nav button.owl-prev .fa-chevron-left {
+            padding: 10px !important;
+            color: rgb(68, 68, 68);
+
+        }
+
+
+        .card-body {
+            padding-right: 2px;
+            padding-top: 5px;
+            padding-bottom: 0px;
+            padding-left: 4px;
+            width: fit-content;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .card-body p {
+            justify-content: center;
+            text-align: left;
+        }
+
+        .price {
+            text-align: right;
+            display: flex;
+            margin-right: 0px;
+            justify-self: end;
+            width: 30px;
+        }
+
+        .dish {
+            padding-right: 40px;
+        }
+
+        /*________________________/.OWL-CAROUSEL______________________________*/
+
+        /*===============================MODAL========================================*/
+        /*_____________Sign-In/Sign-Up_____________________*/
+        .Sign-In,
+        .Sign-Up {
+            width: 100%;
+            margin: 5% 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        .Sign-In .form,
+        .Sign-Up .form {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            align-items: center
+        }
+
+        .Sign-In input,
+        .Sign-Up input {
+            border: 1px solid #D1D1D1 !important;
+            margin-top: 5px;
+            height: 35px;
+            width: 265px;
+            font-family: 'Raleway', sans-serif !important;
+            border-radius: 4px;
+        }
+
+
+
+
+        .Sign-In .btn,
+        .Sign-Up .btn {
+            margin: 10px 0px 0px 0px !important;
+
+            font-family: 'Raleway', sans-serif !important;
+            background-color: rgba(200, 255, 186, 1);
+            border: 2px solid rgba(125, 255, 91, 1);
+            width: 265px;
+            border-radius: 4px !important;
+            height: 35px;
+            float: center;
+            color: rgba(73, 73, 73, 1);
+        }
+
+        /*__________________/.Sign-In/Sign-Up__________________________*/
+        .taabs1 {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            align-items: center;
+            justify-self: center;
+        }
+
+        .nav-link {
+            color: rgb(19, 83, 13) !important;
+        }
+
+        .nav-link:active {
+            border-bottom: black;
+        }
+
+        .nav-tabs .nav-item {
+            margin-bottom: 0px !important;
+        }
+
+        .nav-tabs {
+            border-bottom: 0px !important;
+        }
+
+        .modal-header {
+            border-bottom: 0px !important;
+            border-top-left-radius: 0px !important;
+            border-top-right-radius: 0px !important;
+
+        }
+
+        .modal-header .close1 {
+            border: 0px !important;
+            border: none !important;
+            outline: 0px !important;
+        }
+
+        /*=====================================/.MODAL===================================================*/
+        /*_______________________Delivery____________________________*/
+        .Delivery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+        }
+
+        .Delivery .d {
+            width: 100%;
+            height: 300px;
+            background-color: rgba(204, 249, 200, 1);
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin: 5rem 0rem 5rem 0rem;
+        }
+
+        .Delivery .d .d1 {
+            display: flex;
+            align-self: flex-start;
+        }
+
+        .Delivery .d .TXT {
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            margin: 0px 0px 0px 100px;
+            height: auto;
+            width: auto;
+        }
+
+        .Delivery .d .TXT h1 {
+            font-family: 'Poiret One', cursive;
+            color: #000000;
+            font-weight: bolder;
+        }
+
+        .Delivery .d .TXT h5 {
+            font-weight: normal;
+        }
+
+        .Delivery .d .TXT .btn {
+            display: flex;
+            align-items: center;
+            justify-self: center;
+            justify-content: center;
+            text-decoration: none;
+            width: 120px;
+            background: none;
+            border: none;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media only screen and (max-width:738px) {
+            .Delivery .d .d1 {
+                display: flex;
+                align-self: center !important;
+                width: 295px !important;
+                height: 280px !important;
+            }
+
+            .Delivery .d .d1 img {
+                width: 250px !important;
+            }
+
+            .Delivery .d .TXT {
+                margin: 0px 0px 0px 20px !important;
+            }
+
+            .Delivery .d .TXT h5 {
+                display: none;
+            }
+        }
+
+        /*______________________/.Delivery________________________________-*/
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark  fixed-top scrolling-navbar">
+
+            <div class="container-fluid">
+
+                <!--Navbar Logo-->
+                <img class="logo" src="TIFFIN/logo1.png">
+
+
+                <!--Collapse button-->
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navburger"
+                    aria-controls="navburger" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--Collapse-content-->
+                <div class="collapse navbar-collapse" id="navburger">
+
+                    <!--Links-->
+                    <ul class="nav navbar-nav ml-auto smooth-scroll">
+                        <li class="nav-component">
+                            <a class="a" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-component">
+                            <a class="a" href="About.html">ABOUT US</a>
+                        </li>
+                        <li class="nav-component">
+                            <a class="a" href="Menu.html">MENU</a>
+                        </li>
+                        <li class="nav-component">
+                            <a class="a" href="Contact.html">CONTACT</a>
+                        </li>
+                        <li class="nav-component">
+                            <a class="button" data-toggle="modal" data-target="#MODAL"
+                                style="cursor: pointer; color:white;">SIGNIN/SIGNUP</a>
+                        </li>
+                        <li class="basket">
+                            <a class="basket" href="Basket.html"><i class="fa fa-shopping-basket"
+                                    style="font-size:24px; color:white; float:right;"></i></a>
+                        </li>
+                    </ul>
+                    <!--/Links-->
+                </div>
+                <!--/Collapse-content-->
+
+            </div>
+
+        </nav>
+        <!--/Navbar-->
+        <!---Bg and Label-->
+
+        <div id="bg" class="view">
+
+            <div class="box">
+
+                <div class="container-fluid con">
+                    <div class="inner">
+
+
+
+                        <!--Head-->
+                        <h2 class="mb-0">Exquisite <br>Dabba</h2><br>
+
+                        <!--Tesxt-->
+                        <h4 class="d-sm-none d-md-block d-none d-sm-block">
+                            Devour your tasty dabba at home.<br>
+                            We provide the best services here.
+                        </h4><br>
+                        <button type="button" class="btn"
+                            style=" border:3px solid rgba(252, 230, 37, 0.411); text-decoration: none; border-radius:5px; width:150px; height:50px;">
+                            <a href="Menu.html" style="color:rgb(255, 255, 255) !important; font-size: 20px;">
+                                ORDER NOW
+                            </a>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!---Main body--->
+    <main class="mt-5">
+
+
+
+
+
+
+        <!--_____________________________MODAL____________________________________--->
+        <div class="modal fade" id="MODAL">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <!----modal-header-->
+                    <div class="modal-header">
+                        <button type="button" class="close close1" data-dismiss="modal">×</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <!--___________TABS_________-->
+                        <!----CONTAINER-->
+                        <div class="container mt-3">
+                            <!--taabs-->
+                            <div class="taabs1">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#Sign-In">Sign In</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#Sign-Up">Sign Up</a>
+                                    </li>
+                                </ul>
+                                <!--/.NAv tabs-->
+                            </div>
+                            <!--/.taabs-->
+                            <!-- Tab content-->
+                            <div class="tab-content">
+                                <!----Sign In form-->
+                                <div id="Sign-In" class="container tab-pane active"><br>
+
+
+                                    <!--/.Form-->
+                                    <div class="Sign-In">
+                                        <div class="form">
+
+
+                                            <input type="text" name="name" id="name" placeholder="Email/Phone">
+                                            <input type="text" name="email" id="email" placeholder="Password">
+                                            <!--button-->
+                                            <button class="btn">Sign In</button>
+                                            <!--grp-->
+                                            <div class="d-flex"
+                                                style="flex-direction: row; width:400px; margin: 10px 0px 0px 0px ;">
+                                                <hr
+                                                    style="height:0px; background-color: rgba(197, 197, 197, 1); width:40%;">
+                                                <p style="color: rgb(207, 207, 207);">Or</p>
+                                                <hr
+                                                    style="height:0px; background-color: rgba(197, 197, 197, 1); width:40%;">
+                                            </div>
+                                            <!--/.grp-->
+                                            <p
+                                                style="font-family: 'Raleway', sans-serif; margin:0px; padding:0px; color:rgba(197, 197, 197, 1);">
+                                                Not
+                                                a member?</p>
+                                            <p
+                                                style="font-family: 'Raleway', sans-serif; margin:0px; padding:0px; color:rgba(76, 170, 52, 1);">
+                                                Register</p>
+                                        </div>
+                                    </div>
+                                    <!--/.Form-->
+
+
+
+                                </div>
+                                <!---/.Sign In form-->
+
+                                <!----Sign Up form-->
+                                <div id="Sign-Up" class="container tab-pane fade"><br>
+
+
+                                    <!--Form-->
+                                    <div class="Sign-Up">
+                                        <div class="form">
+
+
+                                            <input type="text" name="name" id="name" placeholder="Full name">
+                                            <input type="text" name="name" id="name" placeholder="Email/Phone">
+                                            <input type="text" name="email" id="email" placeholder="Password">
+                                            <!--button-->
+                                            <button class="btn">Sign Up</button>
+                                            <!---grp-->
+                                            <div class="d-flex"
+                                                style="flex-direction: row; width:400px; margin: 10px 0px 0px 0px ;">
+                                                <hr
+                                                    style="height:0px; background-color: rgba(197, 197, 197, 1); width:40%;">
+                                                <p style="color: rgb(207, 207, 207);">Or</p>
+                                                <hr
+                                                    style="height:0px; background-color: rgba(197, 197, 197, 1); width:40%;">
+                                            </div>
+                                            <!--/.grp-->
+                                            <p
+                                                style="font-family: 'Raleway', sans-serif; margin:0px; padding:0px; color:rgba(197, 197, 197, 1);">
+                                                I agree to the
+                                            </p>
+                                            <p
+                                                style="font-family: 'Raleway', sans-serif; margin:0px; padding:0px; color:rgba(76, 170, 52, 1);">
+                                                Terms & Conditions</p>
+
+
+
+                                        </div>
+                                    </div>
+                                    <!---/.Form-->
+
+
+
+                                </div>
+                                <!----/.Sign Up form-->
+                            </div>
+                            <!---/.Tab content-->
+
+                        </div>
+                        <!--/.CONTAINER-->
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--___________________________/.MODAL_________________________________-->
+
+
+
+
+
+        <div class="container">
+            <!---___________________Section1_______________--->
+            <section class="justify-content-center">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-6 col-md-6 mb-5 d-flex justify-content-center align-items-center">
+
+                        <img src="TIFFIN/p2.jpg" class="img-fluid">
+
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-5 d-flex justify-content-center align-items-center">
+                        <div class="Text d-flex" style="flex-direction: column;">
+                            <h1>Lorem ipsum bleh bleh</h1><br>
+                            <p>Hey thi sdish is great and you should definitely try it out<br>
+                                The best che’s here put in so much effort to make this work<br>
+                                Hey thi sdish is great and you should definitely try it out <br>
+                                The best che’s here put in so much effort to make this work</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-6 col-md-6 mb-5 d-flex justify-content-center align-items-center">
+                        <div class="Text d-flex" style="flex-direction: column;">
+                            <h1>Lorem ipsum bleh bleh</h1><br>
+                            <p> Hey thi sdish is great and you should definitely try it out<br>
+                                The best che’s here put in so much effort to make this work<br>
+                                Hey thi sdish is great and you should definitely try it out<br>
+                                The best che’s here put in so much effort to make this work
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-5 d-flex justify-content-center align-items-center">
+                        <img src="TIFFIN/p3.jpg" class="img-flui">
+                    </div>
+                </div>
+
+            </section>
+            <!---_____________________/.Section1__________________-->
+        </div>
+        <!---________________Section2______________--->
+
+        <section class="Delivery">
+            <div class="d">
+                <div class="d1">
+                    <img src="TIFFIN/DDDDman.png" class="Dman">
+                </div>
+                <div class="TXT">
+                    <h1>ENJOY QUICK
+                        DELIVERY</h1>
+                    <h5>Lorem ipsum dolor sit amet.</h5>
+                    <button class="btn"
+                        style=" border:3px solid #234e00a6 ; text-decoration: none; border-radius:5px; width:130px; height:40px;">
+                        <a href="Menu.html"
+                            style="color:rgb(0, 0, 0) !important; text-decoration: none; font-weight: 700;">ORDER
+                            NOW</a>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!---______________-/.Section2______________-->
+        <div class="mt-5">
+            <h1 class="d-flex justify-content-center align-self-center justify-self-center"
+                style="margin-bottom:3rem; font-family:'Playfair Display', serif; font-style:normal;">Featured dishes
+            </h1>
+
+            <div class="slider">
+                <div class="owl-carousel">
+                    <div class="card">
+                        <img src="TIFFIN/FD1.jpg">
+                        <div class="card-body">
+                            <div class="dish">
+                                <p>
+                                    Lorem ipsum dolor
+                                </p>
+                            </div>
+                            <div class="price">
+                                $20
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="TIFFIN/FD2.jpg">
+                        <div class="card-body">
+                            <div class="dish">
+                                <p>
+                                    Lorem ipsum dolor
+                                </p>
+                            </div>
+                            <div class="price">
+                                $20
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="TIFFIN/FD3.jpg">
+                        <div class="card-body">
+                            <div class="dish">
+                                <p>
+                                    Lorem ipsum dolor
+                                </p>
+                            </div>
+                            <div class="price">
+                                $20
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="TIFFIN/FD1.jpg">
+                        <div class="card-body">
+                            <div class="dish">
+                                <p>
+                                    Lorem ipsum dolor
+                                </p>
+                            </div>
+                            <div class="price">
+                                $20
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="TIFFIN/FD2.jpg">
+                        <div class="card-body">
+                            <div class="dish">
+                                <p>
+                                    Lorem ipsum dolor
+                                </p>
+                            </div>
+                            <div class="price">
+                                $20
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="TIFFIN/FD3.jpg">
+                        <div class="card-body">
+                            <div class="dish">
+                                <p>
+                                    Lorem ipsum dolor
+                                </p>
+                            </div>
+                            <div class="price">
+                                $20
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="TIFFIN/FD1.jpg">
+                        <div class="card-body">
+                            <div class="dish">
+                                <p>
+                                    Lorem ipsum dolor
+                                </p>
+                            </div>
+                            <div class="price">
+                                $20
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="TIFFIN/FD2.jpg">
+                        <div class="card-body">
+                            <div class="dish">
+                                <p>
+                                    Lorem ipsum dolor
+                                </p>
+                            </div>
+                            <div class="price">
+                                $20
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="TIFFIN/FD3.jpg">
+                        <div class="card-body">
+                            <div class="dish">
+                                <p>
+                                    Lorem ipsum dolor
+                                </p>
+                            </div>
+                            <div class="price">
+                                $20
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--_______________________________Testimonials_________________________________________________--->
+        <div class="container mt-5  ">
+            <div id="cc" class="carousel slide carousel-fade" data-ride="carousel">
+                <!--Indicators-->
+                <ul class="carousel-indicators">
+                    <li data-target="#cc" data-slide-to="0" class="active"
+                        style="background-color: gray; border-radius: 50%; height:20px; width:20px;"></li>
+                    <li data-target="#cc" data-slide-to="1"
+                        style=" background-color: gray; border-radius: 50%; height:20px; width:20px; "></li>
+                    <li data-target="#cc" data-slide-to="2"
+                        style="background-color:gray; border-radius: 50%; height:20px; width:20px;"></li>
+                </ul>
+                <!--Slides-->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <div class="card-left"><img src="TIFFIN/Ellipse 2.jpg"></div>
+                            <div class="card-right">
+                                <div class="heading">
+                                    <h3>TESTIMONIALS</h3>
+                                </div>
+                                <div class="type">
+                                    <h5>Lorem ipsum dolor sit amet<br>Lorem ipsum dolor sit amet.</h5>
+                                    <p>Nadia whitman</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-left"><img src="TIFFIN/ppp.jpg"></div>
+                            <div class="card-right">
+                                <div class="heading">
+                                    <h3>TESTIMONIALS</h3>
+                                </div>
+                                <div class="type">
+                                    <h5>consectetur adipisicing elit <br>consectetur adipisicing eliT</h5>
+                                    <p>Gabriella clein</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="card">
+                            <div class="card-left"><img src="TIFFIN/Ellipse 3.jpg"></div>
+                            <div class="card-right">
+                                <div class="heading">
+                                    <h3>TESTIMONIALS</h3>
+                                </div>
+                                <div class="type">
+                                    <h5>exercitationem aliquid lib<br>exercitationem aliquid lib</h5>
+                                    <p>Nathaniel john</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--_______________________/.Testimonials__________________________________________-->
+
+
+
+
+    </main>
+    <!-----footer-->
+    <footer class="footer mt-5">
+
+        <div class="parti" style="padding-top:20px;">
+            <img src="TIFFIN/logo1.png" class="img-fluid">
+        </div>
+
+        <div class="part">
+            <p class="head">CONTACT INF0</p>
+            <p class="txt">9876 RICHMOND ROAD,<br>
+                BANGALORE<br>
+                1234@gmail.com<br>
+                +91 966 9202 497
+            </p>
+        </div>
+
+        <div class="part">
+            <p class="head">SERVICES OPEN</p>
+            <p class="txt">
+                Monday-Friday<br>
+                9:00AM - 10:00AM
+            </p>
+        </div>
+
+        <div class="part">
+            <p class="head">FOLLOW US</p>
+            <div class="d-flex flex-row">
+                <span class="iconify m-2" data-inline="false" data-icon="cib:instagram"
+                    style="color: #dd2170; font-size: 25px;"></span>
+                <span class="iconify m-2" data-inline="false" data-icon="cib:facebook"
+                    style="color: #216cb0; font-size: 23px;"></span>
+                <span class="iconify m-2" data-inline="false" data-icon="cib:twitter"
+                    style="color: #55acee; font-size: 23px;"></span>
+            </div>
+
+        </div>
+    </footer>
+    <!-----/.footer-->
+
+
+
+
+
+
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 3,
+                    nav: true
+                },
+                1000: {
+                    items: 5,
+                    nav: true,
+                    loop: true
+                }
+            }
+        })
+    </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+
+    <script>
+        $(window).scroll(function () {
+            $('nav').toggleClass('scrolled', $(this).scrollTop() > 300);
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+ /*_____________________________Testimonials____________________________________---*/
+ .carousel {
+    width: 100%;
+    height: auto;
+  }
+
+  .carousel-inner {
+
+
+    width: 100%;
+    height: auto;
+
+
+  }
+
+  .carousel-inner .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    height: auto;
+
+
+  }
+
+  .carousel-inner .carousel-item .card {
+    width: 75%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-self: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    margin: 1rem;
+
+  }
+
+  .carousel-inner .carousel-item .card .card-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    margin: 0rem 3rem 0rem 5rem;
+  }
+
+  .carousel-inner .carousel-item .card .card-right {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .carousel-inner .carousel-item .card .card-right .heading {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .carousel-inner .carousel-item .card .card-right .type {
+    display: flex;
+    justify-self: start;
+    align-self: start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    color:rgb(73, 73, 73);
+    font-family: 'Muli', sans-serif;
+    margin: 5rem 0rem 0rem 0rem;
+
+  }
+
+  @media only screen and (max-width:1000px) {
+
+    .carousel-inner .carousel-item .card {
+      width: 100% !important;
+    }
+
+    .carousel-inner .carousel-item .card .card-left {
+      margin: 0rem 2rem 0rem 2rem !important;
+    }
+
+    .carousel-inner .carousel-item .card .card-right .heading {
+      justify-content: start;
+      justify-self: start;
+      align-items: start;
+    }
+  }
+
+  @media only screen and (max-width:768px) {
+    .carousel-inner .carousel-item .card {
+      width: 100% !important;
+      height: 400px !important;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .carousel-inner .carousel-item .card .card-left {
+      margin: 0rem 0rem 0rem 0rem !important;
+    }
+
+    .carousel-inner .carousel-item .card .card-right .type {
+      align-self: center !important;
+      justify-content: center !important;
+      align-items: center !important;
+      margin: 1rem 0rem 0rem 0rem !important;
+    }
+  }
+  /*_________________________/.Testimonials________________________________________________-*/

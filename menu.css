@@ -1,0 +1,442 @@
+html,
+body,
+header,
+#bg {
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    height: fit-content;
+}
+
+#bg {
+    background: url("TIFFIN/menu.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 500px;
+}
+
+.top-nav-collapse {
+    background-color: #041b38;
+}
+
+@media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+        background-color: #041b38;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+        background-color: #041b38;
+    }
+}
+
+.navbar {
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.26);
+    transition: 0.5s ease-in !important;
+}
+.navbar.scrolled{
+    background-color: #041b38;
+}
+
+.logo {
+    font-size: 100%;
+    margin-left: 30px;
+}
+
+.navbar-nav {
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0px;
+    margin-left: auto;
+}
+
+.nav-component {
+    margin-left: auto;
+    float: right;
+    padding-left: 30px;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
+.nav-component a {
+    
+    color: whitesmoke;
+    margin-left: auto;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.basket {
+    padding-top: 0px;
+    padding-left: 50px;
+}
+
+/*=======OWL-CAROUSEL========*/
+.owl-nav {
+    margin-top:2rem;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.owl-next,
+.owl-prev {
+    font-size: 2rem !important;
+    display: inline-flex !important;
+    align-self: center;
+    outline: 0 !important;
+    background-color: rgb(68, 68, 68);
+
+}
+.owl-next{
+    padding-left:5px !important;
+    left:-1px !important;
+
+}
+.owl-carousel .owl-nav button.owl-prev , .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
+    padding:2px !important;
+}
+
+.owl-nav .owl-prev span {
+    outline: 0 !important;
+}
+.owl-nav button.owl-next .fa-chevron-right ,.owl-nav button.owl-prev .fa-chevron-left{
+    padding:10px !important;
+    color:rgb(68, 68, 68);
+
+}  
+
+
+
+.card-body {
+    padding-right: 2px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    padding-left: 4px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.card-body p {
+    justify-content: center;
+    text-align: left;
+}
+
+.price {
+    text-align: right;
+    display: flex;
+    margin-right: 0px;
+    justify-self: end;
+    width: 30px;
+}
+
+.dish {
+    padding-right: 40px;
+}
+
+/*============/.owl-carousel=================*/
+/*___________________TABS__________________*/
+@media (max-width: 976px) {
+
+    .card-d{
+        width:450px !important;
+        height:220px !important;
+    }
+}
+
+
+/*________________/.Media queries____________________*/
+.row .col {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.card-d {
+    width: 500px;
+    height: 190px;
+    display: flex;
+    flex-direction: row;
+}
+.card-d .s1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s2 {
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    height: fit-content;
+    width: auto;
+    margin: 10px;
+}
+
+.b1 {
+    outline: 0px !important;
+    border-style: solid;
+    border-color: rgb(187, 187, 187);
+    background-color: white !important;
+    width: 110px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.taabs {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    justify-self: center;
+}
+
+.nav-link::after {
+    color: red;
+}
+
+.nav-tabs {
+    text-decoration: none;
+    border: none;
+}
+
+.nav-link {
+    color: rgb(19, 83, 13) !important;
+}
+
+@media only screen and (max-width:780px) {
+    .row {
+        margin-bottom: 10px !important;
+    }
+
+    .row .col {
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .card-d {
+        width: 160px !important;
+        height: 250px !important;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px !important;
+    }
+
+    .s2 {
+        margin-top: 0px !important;
+    }
+
+    .s1 img {
+        height: 150px !important;
+        width: 150px !important;
+    }
+
+    .s2 h5 {
+        font-size: 15px !important;
+
+    }
+
+    .s2 p {
+        font-size: 10px !important;
+    }
+
+    .s2 .b1 {
+        width: 80px;
+        border-radius: 4px;
+        font-size: 10px;
+    }
+}
+ /*===============================MODAL========================================*/
+        /*_____________Sign-In/Sign-Up_____________________*/
+        .Sign-In,
+        .Sign-Up {
+            width: 100%;
+            margin: 5% 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        .Sign-In .form,
+        .Sign-Up .form {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            align-items: center
+        }
+
+        .Sign-In input,
+        .Sign-Up input {
+            border: 1px solid #D1D1D1 !important;
+            margin-top: 5px;
+            height: 35px;
+            width: 265px;
+            font-family: 'Raleway', sans-serif !important;
+            border-radius: 4px;
+        }
+
+
+
+
+        .Sign-In .btn,
+        .Sign-Up .btn {
+            margin: 10px 0px 0px 0px !important;
+
+            font-family: 'Raleway', sans-serif !important;
+            background-color: rgba(200, 255, 186, 1);
+            border: 2px solid rgba(125, 255, 91, 1);
+            width: 265px;
+            border-radius: 4px !important;
+            height: 35px;
+            float: center;
+            color: rgba(73, 73, 73, 1);
+        }
+
+        /*__________________/.Sign-In/Sign-Up__________________________*/
+        .taabs1 {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            align-items: center;
+            justify-self: center;
+        }
+
+        .nav-link {
+            color: rgb(19, 83, 13) !important;
+        }
+
+        .nav-link:active {
+            border-bottom: black;
+        }
+
+        .nav-tabs .nav-item {
+            margin-bottom: 0px !important;
+        }
+
+        .nav-tabs {
+            border-bottom: 0px !important;
+        }
+
+        .modal-header {
+            border-bottom: 0px !important;
+            border-top-left-radius: 0px !important;
+            border-top-right-radius: 0px !important;
+
+        }
+
+        .modal-header .close1 {
+            border: 0px !important;
+            border: none !important;
+            outline: 0px !important;
+        }
+
+        /*=====================================/.MODAL===================================================*/
+         /*_____________________Footer css_________________________*/   
+         .footer{
+            background-color: #041b38 !important;
+            width: 100%;
+            display:flex;
+            flex-direction:row;
+            height:auto;
+            padding:40px;
+        }
+        .footer .part{
+            display:flex;
+            flex-direction: column;
+            width:25%;
+            align-items:flex-start;
+            justify-self:flex-start;
+            justify-content:flex-start;
+
+          
+        }
+        .footer .parti{
+            display:flex;
+            flex-direction: column;
+            width:25%;
+            align-items:center;
+            justify-self:start;
+            justify-content:start;
+        }
+        .part .img-fluid{
+            width:110px;
+            height:105px;
+            align-self: center;
+        }
+        .footer .part .txt{
+            color:rgb(233, 233, 233);
+            text-align: flex-start;
+        }
+        .footer .part .head{
+            color: rgba(249, 253, 66, 1);
+            justify-self: flex-start;
+            display:flex;
+            align-self: flex-start;
+
+        }
+        @media only screen and (max-width:700px){
+            .footer{
+            background-color: gray;
+            width: 100%;
+            display:flex;
+            flex-direction:row;
+            height:auto;
+            padding: 15px 0px 0px 20px !important;
+        }
+        .footer .part{
+            display:flex;
+            flex-direction:column;
+            width:50%;
+            align-items:flex-start !important;
+            justify-self:flex-start !important;
+            justify-content:flex-start;
+            align-self: flex-start !important;
+            margin-right:5px !important;
+        }
+        .part .img-fluid{
+            width:110px;
+            height:105px;
+        }
+        .footer .part .txt{
+            color:rgb(233, 233, 233);
+            text-align: flex-start;
+            font-size:10px !important;
+            line-height: 1.5rem !important;
+        }
+        .footer .part .head{
+            color: rgba(249, 253, 66, 1);
+            justify-self: start;
+            font-size:14px !important;
+            text-align: left !important;
+            vertical-align: sub !important;
+            justify-self: start !important; 
+        }
+        .footer .parti{
+            display:none !important;
+        }
+        .part .flex-row .iconify{
+            font-size: 15px !important;
+        }
+
+    }
+    /*__________________/.Footer_______________________*/
+
+    
